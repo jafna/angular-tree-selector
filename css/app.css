@@ -1,0 +1,14 @@
+/* app css stylesheet */
+html{
+  font-size: 175%;
+}
+ul{
+  list-style-type: none;
+}
+.selected{
+  color: gray;
+}
+.category-opener{
+  width: 42px;
+  float: left;
+}

@@ -1,0 +1,12 @@
+<div ng-controller="InterestListController">
+  <ul>
+    <li ng-repeat="interest in selectedInterests">
+      <span ng-click="removeInterest(interest)">{{interest.name}} ({{interest.audience_size}})</span>
+    </li>
+  </ul>
+
+  <span ng-click="toggleInterest(rootInterest)">Browse interests</span>
+  <ul ng-show="rootInterest.showingChildren">
+    <li ng-repeat="interest in rootInterest.children" ng-include="'interest-node.html'"></li>
+  </ul>
+</div>

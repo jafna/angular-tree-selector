@@ -1,0 +1,10 @@
+<div class="category-opener">
+  &nbsp;
+  <span ng-click="toggleInterest(interest)" ng-show="hasChildren(interest)">
+    {{ interest.showingChildren ? '&#x25bc;' : '&#x25b6;'}}
+  </span>
+</div>
+<span ng-click="addInterest(interest)" ng-class="{selected : isSelected(interest)}">{{interest.name}} ({{interest.audience_size}})</span>
+<ul ng-show="interest.showingChildren">
+  <li ng-repeat="interest in interest.children" ng-include="'interest-node.html'"></li>
+</ul>
